@@ -28,7 +28,7 @@
     numbering: none,
   )
   // Font settings
-  set text(font: ("YuMincho", "Century"), size: 10pt, lang: "ja")
+  set text(font: ("Yu Mincho", "YuMincho", "Century"), size: 10pt, lang: "ja")
 
   set heading(numbering: "1.1.")
   
