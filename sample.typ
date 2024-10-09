@@ -1,12 +1,12 @@
 // sample.typ
-#import "vconf2024.typ": conf, rules
+#import "vconf2024.typ": conf
 
 #show: doc => conf(
   title: "バーチャル学会2024要旨テンプレート（タイトルを記入）",
   authors: (
-    (name: [hinoride #super[1]], contact: "Twitter: @hiddenotna"),
-    (name: [はこつき #super[2]], contact: "E-mail: hakomoon@nchiba.net"),
-    (name: [Lcamu #super[2]], contact: "Twitter: @ogtonvr180426"),
+    (name: [hinoride#super[1]], contact: "Twitter: @hiddenotna"),
+    (name: [はこつき#super[2]], contact: "E-mail: hakomoon@nchiba.net"),
+    (name: [Lcamu#super[2]], contact: "Twitter: @ogtonvr180426"),
   ),
   affiliations: ([#super[1]トライボロジー勉強会], [#super[2]ラーメン同好会]),
   abstract: [
@@ -15,15 +15,6 @@
   bibliography-file: "bibliography.yaml",
   doc,
 )
-
-#rules.update((
-  heading: it => {
-    set block(below: 0.5em)
-    set text(weight: "bold")
-    it
-  },
-  figure: it => align(center, it)
-))
 
 = 緒言
 
@@ -82,4 +73,4 @@ A4判用紙のPDFで提出する．Word，LaTeXもしくはTypstファイルで�
 
 #heading(level: 1, numbering: none)[謝辞]
 
-バーチャル学会 Typst版テンプレートの作成にあたり，きゅーしす様 (Twitter: \@Queue_sys) にご助言・ご助力いただきました．心より深く感謝申し上げます．
+バーチャル学会 Typst版テンプレートの作成にあたり，はこつき\@re_hako_moon様のLaTeXテンプレートを参考にさせていただきました．心より深く感謝申し上げます．
