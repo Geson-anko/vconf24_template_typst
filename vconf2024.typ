@@ -18,6 +18,7 @@
   affiliations: none,
   abstract: [],
   bibliography-file: none,
+  bibliography-margin: 40pt, // 本文と参考文献の行間調整
   body
 ) = {
   // Document setup
@@ -88,7 +89,7 @@
 
   if bibliography-file != none {
     set text(lang: "en")
-    v(40pt, weak: true) // 参考文献とメイン文書の間調整
+    v(bibliography-margin, weak: true) // 参考文献とメイン文書の間調整
     bibliography(bibliography-file, title: "参考文献", style: "ieee")
   }
 }
