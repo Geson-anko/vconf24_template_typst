@@ -1,4 +1,4 @@
-// vconf2024.typ
+// vconf2025.typ
 
 #let to-string(content) = {
   if content.has("text") {

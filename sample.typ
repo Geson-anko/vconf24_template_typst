@@ -1,8 +1,8 @@
 // sample.typ
-#import "vconf2024.typ": conf
+#import "vconf2025.typ": conf
 
 #show: doc => conf(
-  title: "バーチャル学会2024要旨テンプレート（タイトルを記入）",
+  title: "バーチャル学会2025要旨テンプレート（タイトルを記入）",
   authors: (
     (name: [hinoride#super[1]], contact: "Twitter: @hiddenotna"),
     (name: [はこつき#super[2]], contact: "E-mail: hakomoon@nchiba.net"),
@@ -67,7 +67,7 @@ A4判用紙のPDFで提出する．Word，LaTeXもしくはTypstファイルで�
 表は要旨で言及する情報のみを記載し，題名は上に，説明文は下に記述する．題名はその終わりにピリオドを入れる．表中の列の頭には適切な題をつけ，適切な略字を用いて短くする．単位を明示する．各行・各列に番号をつけることは本文引用に必要な場合を除き避ける．
 
 #figure(
-  image("vconf2024.png", width: 95%),
+  image("vconf2025.png", width: 95%),
   caption: [主張を裏付けるデータや説明のための図を配置してもよい．],
 ) <fig:sample_figure>
 
