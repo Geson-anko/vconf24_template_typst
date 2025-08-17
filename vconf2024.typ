@@ -19,31 +19,35 @@
   abstract: [],
   bibliography-file: none,
   bibliography-margin: 40pt, // 本文と参考文献の行間調整
-  body
+  body,
 ) = {
   // Document setup
-  // set document(author: authors.map(a => to-string(a.name)), title: title) // 著者情報のメタデータを埋め込みたい場合はコメントアウト 
+  // set document(author: authors.map(a => to-string(a.name)), title: title) // 著者情報のメタデータを埋め込みたい場合はコメントアウト
   set page(
     paper: "a4",
     margin: (top: 12.7mm, bottom: 12.7mm, left: 12.7mm, right: 12.7mm),
     numbering: none,
   )
-  // Font settings
-  set text(font: ("Yu Mincho", "YuMincho", "Century"), size: 10pt, lang: "ja")
+  // ドキュメント全体のデフォルトフォント
+  set text(font: "Harano Aji Mincho", lang: "ja")
 
   set heading(numbering: "1.1.")
-  
+
   // Title block
   align(center)[
     #text(weight: 700, size: 18pt, title)
     #v(12pt, weak: true)
     #text(size: 10pt)[
-      #authors.map(author => [
-        #box(width: 30%, [
-          #author.name\
-          #text(size: 9pt, author.contact)
-        ])
-      ]).join([ ])
+      #(
+        authors
+          .map(author => [
+            #box(width: 30%, [
+              #author.name\
+              #text(size: 9pt, author.contact)
+            ])
+          ])
+          .join([ ])
+      )
     ]
     #v(10pt, weak: true)
     #if affiliations != none {
@@ -72,8 +76,9 @@
     it
   }
   show figure.caption: set align(left) // キャプションを左寄せ
-  show figure.where( // 表のキャプションは上に表示
-    kind: table
+  show figure.where(
+    // 表のキャプションは上に表示
+    kind: table,
   ): set figure.caption(position: top)
 
   // Abstract
