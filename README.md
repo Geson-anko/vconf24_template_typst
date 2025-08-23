@@ -10,8 +10,8 @@
 ### 1. リポジトリのクローンとフォントの準備
 
 ```bash
-git clone --recursive https://github.com/your-username/vconf24_template_typst.git
-cd vconf24_template_typst
+git clone --recursive https://github.com/your-username/vconf_template_typst.git
+cd vconf_template_typst
 ```
 
 Harano Aji Fontは日本語表示に必要なフォントで、サブモジュールとして含まれています。
